@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const Ship = require('../models/Ship');
 
 async function findAll() {
@@ -6,10 +5,6 @@ async function findAll() {
 }
 
 async function findById(id) {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return null;
-  }
-
   return Ship.findById(id).lean();
 }
 
