@@ -48,6 +48,3 @@ graph LR
 3. Start en MongoDB-instans med databasen `spacerescueDB`.
 4. Opret eventuelt en `.env`-fil med `MONGODB_URI` og `PORT`.
 5. Kør `npm run dev` for at starte serveren på port 3000.
-
-Serveren logger `connected to mongoDB`, når forbindelsen er oprettet, og kan kontrolleres
-med `GET /health`.
