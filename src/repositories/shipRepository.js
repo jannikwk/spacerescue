@@ -13,4 +13,9 @@ async function findById(id) {
   return Ship.findById(id).lean();
 }
 
-module.exports = { findAll, findById };
+async function create(shipData) {
+  const ship = await Ship.create(shipData);
+  return ship.toObject();
+}
+
+module.exports = { findAll, findById, create };

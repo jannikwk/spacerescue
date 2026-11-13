@@ -8,4 +8,11 @@ async function getShipById(id) {
   return shipRepository.findById(id);
 }
 
-module.exports = { getAllShips, getShipById };
+async function createShip(shipData) {
+  return shipRepository.create({
+    ...shipData,
+    status: 'available',
+  });
+}
+
+module.exports = { getAllShips, getShipById, createShip };
