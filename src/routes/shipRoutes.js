@@ -5,5 +5,6 @@ const router = express.Router();
 
 router.get('/ships', shipController.getAllShips);
 router.get('/ships/:id', shipController.getShipById);
+router.post('/ships', shipController.createShip);
 
 module.exports = router;
