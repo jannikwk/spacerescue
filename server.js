@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const express = require('express');
 const connectToDatabase = require('./src/config/database');
 const routes = require('./src/routes');
@@ -22,6 +20,8 @@ async function startServer() {
   }
 }
 
-startServer();
+if (require.main === module) {
+  startServer();
+}
 
 module.exports = app;
