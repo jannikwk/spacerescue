@@ -5,8 +5,8 @@ const validateShipId = require('../middleware/validateShipId');
 
 const router = express.Router();
 
-router.get('/ships', shipController.getAllShips);
-router.get('/ships/:id', validateShipId, shipController.getShipById);
-router.post('/ships', validateShip, shipController.createShip);
+router.get('/', shipController.getAllShips);
+router.get('/:id', validateShipId, shipController.getShipById);
+router.post('/', validateShip, shipController.createShip);
 
 module.exports = router;

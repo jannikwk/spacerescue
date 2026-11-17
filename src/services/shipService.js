@@ -15,4 +15,8 @@ async function createShip(shipData) {
   });
 }
 
-module.exports = { getAllShips, getShipById, createShip };
+async function updateShipStatus(id, status) {
+  return shipRepository.updateStatus(id, status);
+}
+
+module.exports = { getAllShips, getShipById, createShip, updateShipStatus };

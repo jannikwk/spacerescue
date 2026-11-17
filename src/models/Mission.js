@@ -17,6 +17,11 @@ const missionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  assignedShip: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Ship',
+    default: null,
+  },
 });
 
 module.exports = mongoose.model('Mission', missionSchema);

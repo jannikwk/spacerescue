@@ -13,4 +13,8 @@ async function create(shipData) {
   return ship.toObject();
 }
 
-module.exports = { findAll, findById, create };
+async function updateStatus(id, status) {
+  return Ship.findByIdAndUpdate(id, { status }, { returnDocument: "after" }).lean();
+}
+
+module.exports = { findAll, findById, create, updateStatus };
